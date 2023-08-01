@@ -34,9 +34,7 @@ def typing_attempt():
     round_wpm = round(wpm, 2)
     round_accu = round(accuracy, 2)
     round_time = round(timetaken, 2)
-    print(
-        f"\nWPM: {round_wpm}\nAccuracy: {round_accu}\nTime Taken: {round_time} seconds\n"
-    )
+    print(f"\nWPM: {round_wpm}\nAccuracy: {round_accu}\nTime Taken: {round_time} seconds\n" )
 
 
 # Interactive Loop
