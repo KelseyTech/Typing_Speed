@@ -12,9 +12,9 @@ def typing_attempt():
     # Difficulty
     sentence = input("Choose Easy or Hard: ")
     if sentence.title() == "Easy":
-        sentence_len = random_line("short.txt")
+        sentence_len = random_line("sentences/short.txt")
     else:
-        sentence_len = random_line("long.txt")
+        sentence_len = random_line("sentences/long.txt")
 
     wordcount = len(sentence_len.split())
     print(f"\n{sentence_len}")
@@ -28,7 +28,7 @@ def typing_attempt():
     accuracy = len(set(timed_text.split()) & set(sentence_len.split()))
     accuracy = accuracy / wordcount
     timetaken = end_time - start_time
-    wpm = wordcount / timetaken
+    wpm = wordcount / timetaken * 60
 
     # Rounded numbers
     round_wpm = round(wpm, 2)
